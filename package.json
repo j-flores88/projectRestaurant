@@ -1,0 +1,23 @@
+{
+  "name": "projectrestaurant",
+  "version": "1.0.0",
+  "description": "OdinWebDev Project Restaurant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-flores88/projectRestaurant.git"
+  },
+  "author": "Joel Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-flores88/projectRestaurant/issues"
+  },
+  "homepage": "https://github.com/j-flores88/projectRestaurant#readme",
+  "devDependencies": {
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
