@@ -1,13 +1,14 @@
-import { navBar } from "./navbar";
-
+import { renderOnPage } from "./renderOnPage";
+import { navBar } from './navBar';
+import { welcomeTitle, subTitle } from "./welcome";
 const content = document.getElementById('content');
 
-const renderPage = (navigation, main, footer) => {
-    const navMenu = document.createElement('nav')
-    navMenu.appendChild(navBar)
-    content.appendChild(navMenu);
+const homeScren = () => {
+    renderOnPage('nav', navBar)
+    renderOnPage('main', welcomeTitle)
+    renderOnPage('main', subTitle)
 }
 
-renderPage(navBar, null, null)
+homeScren();
 
 export { content }
