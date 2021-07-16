@@ -20,13 +20,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/footer.js":
+/*!***********************!*\
+  !*** ./src/footer.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"footerElement\": () => (/* binding */ footerElement)\n/* harmony export */ });\n/* harmony import */ var _renderElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderElement */ \"./src/renderElement.js\");\n\n\nconst footerElement = (0,_renderElement__WEBPACK_IMPORTED_MODULE_0__.renderElement)('ul', 'li', ['ICON1', 'ICON2', 'ICON3'], null);\n\n\n\n//# sourceURL=webpack://projectrestaurant/./src/footer.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"content\": () => (/* binding */ content)\n/* harmony export */ });\n/* harmony import */ var _renderOnPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderOnPage */ \"./src/renderOnPage.js\");\n/* harmony import */ var _navBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navBar */ \"./src/navBar.js\");\n/* harmony import */ var _welcome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./welcome */ \"./src/welcome.js\");\n\n\n\nconst content = document.getElementById('content');\n\nconst homeScren = () => {\n    (0,_renderOnPage__WEBPACK_IMPORTED_MODULE_0__.renderOnPage)('nav', _navBar__WEBPACK_IMPORTED_MODULE_1__.navBar)\n    ;(0,_renderOnPage__WEBPACK_IMPORTED_MODULE_0__.renderOnPage)('main', _welcome__WEBPACK_IMPORTED_MODULE_2__.welcomeTitle)\n    ;(0,_renderOnPage__WEBPACK_IMPORTED_MODULE_0__.renderOnPage)('main', _welcome__WEBPACK_IMPORTED_MODULE_2__.subTitle)\n}\n\nhomeScren();\n\n\n\n//# sourceURL=webpack://projectrestaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"content\": () => (/* binding */ content)\n/* harmony export */ });\n/* harmony import */ var _renderOnPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderOnPage */ \"./src/renderOnPage.js\");\n/* harmony import */ var _navBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navBar */ \"./src/navBar.js\");\n/* harmony import */ var _welcome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./welcome */ \"./src/welcome.js\");\n/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer */ \"./src/footer.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\n\n\nconst content = document.getElementById('content');\n\nconst homeScreen = () => {\n    (0,_renderOnPage__WEBPACK_IMPORTED_MODULE_0__.renderOnPage)('nav', _navBar__WEBPACK_IMPORTED_MODULE_1__.navBar)\n    // renderOnPage('main', welcomeTitle)\n    // renderOnPage('main', subTitle)\n    ;(0,_renderOnPage__WEBPACK_IMPORTED_MODULE_0__.renderOnPage)('main', _menu__WEBPACK_IMPORTED_MODULE_4__.finalMenu)\n    ;(0,_renderOnPage__WEBPACK_IMPORTED_MODULE_0__.renderOnPage)('footer', _footer__WEBPACK_IMPORTED_MODULE_3__.footerElement)\n}\n\nhomeScreen();\n\n\n\n//# sourceURL=webpack://projectrestaurant/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"finalMenu\": () => (/* binding */ finalMenu)\n/* harmony export */ });\n/* harmony import */ var _renderElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderElement */ \"./src/renderElement.js\");\n\n\nconst restaurantMenu = {\n    itemOne: [\n        'Enchiladas',\n        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet',\n        '$25'\n    ],\n    itemTwo: [\n        'Birria',\n        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet',\n        '$30'\n    ],\n    itemThree: [\n        'Flan',\n        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet',\n        '$15'\n    ]\n}\n\nlet menuItem; \n\nconst renderMenu = (menu) => {\n    const menuDiv = document.createElement('div');\n\n    for(let food in menu) {\n        menuDiv.appendChild((0,_renderElement__WEBPACK_IMPORTED_MODULE_0__.renderElement)('div', 'p', menu[food], null));\n    }\n    return menuDiv\n}\n\nconst finalMenu = renderMenu(restaurantMenu)\n\n\n\n//# sourceURL=webpack://projectrestaurant/./src/menu.js?");
 
 /***/ }),
 
@@ -66,7 +86,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"welcomeTitle\": () => (/* binding */ welcomeTitle),\n/* harmony export */   \"subTitle\": () => (/* binding */ subTitle)\n/* harmony export */ });\n/* harmony import */ var _renderElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderElement */ \"./src/renderElement.js\");\n\n\nconst welcomeTitle = (0,_renderElement__WEBPACK_IMPORTED_MODULE_0__.renderElement)('div', 'p', ['Alma', 'Latina'], null)\nconst subTitle = (0,_renderElement__WEBPACK_IMPORTED_MODULE_0__.renderElement)('div', 'p', ['Fine Mexican Cuisine', null])\n\n\n\n//# sourceURL=webpack://projectrestaurant/./src/welcome.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"welcomeTitle\": () => (/* binding */ welcomeTitle),\n/* harmony export */   \"subTitle\": () => (/* binding */ subTitle)\n/* harmony export */ });\n/* harmony import */ var _renderElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderElement */ \"./src/renderElement.js\");\n\n\nconst welcomeTitle = (0,_renderElement__WEBPACK_IMPORTED_MODULE_0__.renderElement)('div', 'p', ['Alma', 'Latina'], null)\nconst subTitle = (0,_renderElement__WEBPACK_IMPORTED_MODULE_0__.renderElement)('div', 'p', ['Fine Mexican Cuisine'], null)\n\n\n\n//# sourceURL=webpack://projectrestaurant/./src/welcome.js?");
 
 /***/ })
 

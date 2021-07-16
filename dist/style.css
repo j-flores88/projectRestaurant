@@ -1,3 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+#content {
+    width: 100vw;
+    height: 100vh;
+    /* background: url(https://media.cntraveler.com/photos/5a68fc3b503a450ae0e9be07/master/pass/Gracias-Madre__2018gracias_madre---food-overhead-shot-.jpg); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
 nav {
     display: flex;
     height: 94px;
@@ -22,3 +39,13 @@ nav {
     padding-bottom: 4px;
     cursor: pointer;
   }
+
+footer {
+    height: 94px;
+    border-top: 2px solid #000000;
+    display: flex;
+
+}
+footer p {
+    margin: auto;
+}
