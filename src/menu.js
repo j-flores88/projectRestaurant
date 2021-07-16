@@ -29,6 +29,7 @@ const renderMenu = (menu) => {
     return menuDiv
 }
 
-const finalMenu = renderMenu(restaurantMenu)
+const menuTitle = renderElement('div', 'p', ['COMIDA'], 'title');
+const finalMenu = renderMenu(restaurantMenu);
 
-export { finalMenu };
+export { finalMenu, menuTitle };

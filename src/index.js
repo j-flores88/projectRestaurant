@@ -2,41 +2,29 @@ import { renderOnPage } from "./renderOnPage";
 import { navBar } from './navBar';
 import { welcomeTitle, subTitle } from "./welcome";
 import { footerElement } from "./footer";
-import { finalMenu } from "./menu";
+import { finalMenu, menuTitle } from "./menu";
 import { aboutHeader, aboutUs } from "./about";
+import { generateImage } from "./generateImage";
+import flame from './flame.png'
 
 const content = document.getElementById('content');
 
-const homeScreen = () => {
+const showScreen = (size, main, sub) => {
     content.innerHTML = '';
-    renderOnPage('nav', navBar)
-    renderOnPage('main', welcomeTitle)
-    renderOnPage('main', subTitle)
-    renderOnPage('footer', footerElement)
-}
-
-const showMenu = () => {
-    content.innerHTML = '';
-    renderOnPage('nav', navBar)
-    renderOnPage('main', finalMenu)
-    renderOnPage('footer', footerElement)
-}
-
-const showAboutUs = () => {
-    content.innerHTML = '';
-    renderOnPage('nav', navBar)
-    renderOnPage('main', aboutHeader)
-    renderOnPage('main', aboutUs)
-    renderOnPage('footer', footerElement)
+    renderOnPage('nav', navBar);
+    renderOnPage('main', generateImage(flame, size))
+    renderOnPage('main', main)
+    renderOnPage('main', sub)
+    renderOnPage('footer', footerElement);
 }
 
 document.addEventListener('click', (e) => {
     const target = e.target.innerText;
-    if(target === 'HOME') homeScreen();
-    if(target === 'MENU') showMenu();
-    if(target === 'ABOUT') showAboutUs();
+    if(target === 'HOME') showScreen(200, welcomeTitle, subTitle);
+    if(target === 'MENU') showScreen(100, menuTitle, finalMenu);
+    if(target === 'ABOUT') showScreen(100, aboutHeader, aboutUs);
 })
 
-homeScreen();
+showScreen(200, welcomeTitle, subTitle);
 
 export { content }

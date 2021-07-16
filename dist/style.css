@@ -1,14 +1,40 @@
+@font-face {
+  font-family: 'Abril';
+  src: url('../src/abril.ttf') format('ttf'),
+    url('../src/abril.ttf') format('ttf');
+  font-family: 'Roboto';
+  src: url('../src/roboto.light.ttf') format('ttf');
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   text-align: center;
 }
+.title {
+  font-family: 'Abril';
+  font-size: 5rem;
+  margin: -100px;
+  color: azure;
+  outline: black;
+}
+
+.title, h1 {
+  margin: -100px;
+}
+
+.subTitle {
+  font-family: 'Roboto';
+  color: azure;
+  font-size: 1.5rem;
+}
+
 #content {
     width: 100vw;
     height: 100vh;
-    /* background: url(https://media.cntraveler.com/photos/5a68fc3b503a450ae0e9be07/master/pass/Gracias-Madre__2018gracias_madre---food-overhead-shot-.jpg); */
+    background: url(https://media.timeout.com/images/104688674/image.jpg);
+    /* background: tomato; */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -18,7 +44,7 @@
 nav {
     display: flex;
     height: 94px;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid #ffffff;
   }
   
   ul {
@@ -33,16 +59,18 @@ nav {
     margin: 0 20px;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
+    color: azure;
+    font-family: 'Roboto';
   }
   li:hover {
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 4px;
     cursor: pointer;
   }
 
 footer {
     height: 94px;
-    border-top: 2px solid #000000;
+    border-top: 2px solid #ffffff;
     display: flex;
 
 }
