@@ -24,7 +24,7 @@ const renderMenu = (menu) => {
     const menuDiv = document.createElement('div');
 
     for(let food in menu) {
-        menuDiv.appendChild(renderElement('div', 'p', menu[food], null));
+        menuDiv.appendChild(renderElement('div', 'p', menu[food], 'menuText'));
     }
     return menuDiv
 }

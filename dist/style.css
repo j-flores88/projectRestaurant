@@ -30,6 +30,12 @@
   font-size: 1.5rem;
 }
 
+.menuText {
+  color:azure;
+  font-family: 'Roboto';
+  font-size: 1.25rem;
+}
+
 #content {
     width: 100vw;
     height: 100vh;

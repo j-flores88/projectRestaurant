@@ -5,6 +5,6 @@ const about = [
 ];
 
 const aboutHeader = renderElement('div', 'p', ['SOBRE NOSOTROS'], 'title')
-const aboutUs = renderElement('div', 'p', [about], null);
+const aboutUs = renderElement('div', 'p', [about], 'menuText');
 
 export { aboutHeader, aboutUs };
